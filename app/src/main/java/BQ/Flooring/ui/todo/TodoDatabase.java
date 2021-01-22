@@ -32,7 +32,6 @@ public class TodoDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("DROP TABLE IF EXISTS " + TODO_TABLE);
         db.execSQL(CREATE_TODO_TABLE);
 
     }
@@ -51,6 +50,7 @@ public class TodoDatabase extends SQLiteOpenHelper {
         cv.put(TASK, task);
         cv.put(AISLE, aisle);
         db.insert(TODO_TABLE,null,cv);
+        db.close();
 
     }
 

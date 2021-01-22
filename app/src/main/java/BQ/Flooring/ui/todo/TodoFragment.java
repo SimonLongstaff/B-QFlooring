@@ -30,7 +30,6 @@ public class TodoFragment extends Fragment {
     private static final String TAG = "TODOFrag";
     private ListView taskListView;
     private  TodoDatabase todoDatabase;
-    private ArrayAdapter<String> mAdapter;
     ToDoAdapter adapter;
 
     @Override

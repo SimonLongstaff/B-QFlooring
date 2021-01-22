@@ -14,6 +14,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import BQ.Flooring.ui.Order.OrderDatabase;
+import BQ.Flooring.ui.Order.OrderScanner;
 import BQ.Flooring.ui.todo.TodoDatabase;
 import BQ.Flooring.ui.todo.TodoFragment;
 
@@ -21,11 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
     public TodoDatabase MainActivityTodoDatabase;
     public TodoFragment todoFragment;
+    public OrderScanner orderScanner;
+
+    public OrderDatabase orderDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        orderDatabase = new OrderDatabase(this);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -49,4 +55,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void deleteOrder(View view) {
+        View parent = (View) view.getParent();
+        TextView barcodeText = parent.findViewById(R.id.barcode_title);
+        String barcode = String.valueOf(barcodeText.getText());
+        orderDatabase.deleteBarcode(barcode);
+        orderScanner.updateUI();
+
+    }
 }
