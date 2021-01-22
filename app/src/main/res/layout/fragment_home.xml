@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <EditText
+        android:id="@+id/SizePerPack"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="52dp"
+        android:autofillHints="Size Per Pack"
+        android:hint="@string/size_per_pack"
+        app:layout_constraintEnd_toStartOf="@+id/PricePerPack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/PricePerPack"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:autofillHints="Price Per Pack"
+        android:hint="@string/price_per_pack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Width"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:autofillHints="Price Per Pack"
+        android:hint="@string/width"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PricePerPack" />
+
+    <EditText
+        android:id="@+id/Height"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:autofillHints="Price Per Pack"
+        android:hint="@string/height"
+        app:layout_constraintEnd_toStartOf="@+id/Width"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SizePerPack" />
+
+    <EditText
+        android:id="@+id/M2"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="Price Per Pack"
+        android:hint="@string/m2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Height" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/Feet"
+        android:textOff="@string/off"
+        android:textOn="@string/on"
+        app:showText="true"
+        android:text="@string/feet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/M2"
+        app:layout_constraintTop_toBottomOf="@+id/Width" />
+
+    <Button
+        android:id="@+id/Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Feet" />
+
+    <TextView
+        android:id="@+id/pack_calculated"
+        android:textSize="35sp"
+        android:layout_width="236dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">B&amp;Q-Companion</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="price_per_pack">Price Per Pack</string>
+    <string name="size_per_pack">Size Per Pack</string>
+    <string name="height">Height</string>
+    <string name="width">Width</string>
+    <string name="m2">M2</string>
+    <string name="calculate">Calculate</string>
+    <string name="feet">Feet</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="floor_calculator">Floor Calculator</string>
+    <string name="to_do">To Do</string>
+    <string name="done">Done</string>
+    <string name="todo">TODO</string>
+</resources>
