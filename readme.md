@@ -13,7 +13,7 @@ An Android application created to assist myself during my work at a DIY Store.
 
 # Screenshots
 
-<img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/measure.jpg?raw=true" alt="measure.jpg" width="322" height="645">
+<img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/measure.jpg?raw=true" alt="measure.jpg" width="322" height="645"><img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/measure2.jpg?raw=true" alt="measure.jpg" width="322" height="645">
 
 <img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/scan.jpg?raw=true" alt="scan.jpg" width="323" height="647"><img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/scan2.jpg?raw=true" alt="scan2.jpg" width="322" height="645"><img src="https://github.com/SimonLongstaff/B-QFlooring/blob/main/readmeresources/scan3.jpg?raw=true" alt="scan3.jpg" width="322" height="645">
 
