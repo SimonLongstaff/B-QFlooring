@@ -6,7 +6,8 @@ An Android application created to assist myself during my work at a DIY Store.
 
 # Features
 
-- Converts measurements into the correct pack number and displays price for flooring packs
+- Calculates measurements into the correct pack number and displays price for flooring packs
+- Converts from feet to meters used by flooring companies
 - Order builder using camera bar-code scanner library
 - To do list that includes location field for the storing of aisle numbers
 
