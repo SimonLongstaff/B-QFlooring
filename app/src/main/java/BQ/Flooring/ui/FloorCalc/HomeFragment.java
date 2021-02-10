@@ -113,7 +113,7 @@ public class HomeFragment extends Fragment {
             if (!M2.getText().toString().equals("")) {
                 floorSpace =Double.parseDouble(M2.getText().toString());
             }
-            
+
 
 
         }
