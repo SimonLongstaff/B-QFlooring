@@ -1,5 +1,3 @@
-B&Q App ReadME
-
 # Work Companion App
 
 An Android application created to assist myself during my work at a DIY Store.
