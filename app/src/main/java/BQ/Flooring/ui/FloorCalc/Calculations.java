@@ -1,4 +1,4 @@
-package BQ.Flooring.ui.home;
+package BQ.Flooring.ui.FloorCalc;
 
 public class Calculations {
 

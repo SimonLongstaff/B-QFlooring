@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="BQ.Flooring.ui.home.HomeFragment"
+        android:name="BQ.Flooring.ui.FloorCalc.HomeFragment"
         android:label="Pack Calculation"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_floor_cal" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="BQ.Flooring.ui.Order.OrderScanner"
-        android:label="@string/title_dashboard"
+        android:label="@string/order_builder"
         tools:layout="@layout/fragment_order" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="BQ.Flooring.ui.todo.TodoFragment"
         android:label="To Do"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_todo" />
 </navigation>

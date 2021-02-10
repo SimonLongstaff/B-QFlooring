@@ -18,4 +18,5 @@
     <string name="todo">TODO</string>
     <string name="delete">Delete</string>
     <string name="scan">Scan</string>
+    <string name="order_builder">Order Builder</string>
 </resources>

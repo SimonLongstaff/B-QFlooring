@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.FloorCalc.HomeFragment">
 
     <EditText
         android:id="@+id/SizePerPack"
@@ -102,14 +102,34 @@
 
     <TextView
         android:id="@+id/pack_calculated"
-        android:textSize="35sp"
         android:layout_width="236dp"
         android:layout_height="58dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="84dp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.394"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/M2" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="236dp"
+        android:layout_height="58dp"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pack_calculated" />
+
+    <TextView
+        android:id="@+id/other_stats"
+        android:layout_width="233dp"
+        android:layout_height="148dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
