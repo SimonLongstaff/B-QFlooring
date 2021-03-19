@@ -1,14 +1,19 @@
 package BQ.Flooring;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -45,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Directly called from XML function
+     * Deletes a tast from the To do list
+     *
+     * @param view - the view it was called from
+     */
     public void deleteTask(View view) {
         View parent = (View) view.getParent();
         TextView taskText = parent.findViewById(R.id.task_title);
@@ -54,7 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Directly called from XML function
+     * Deletes a barcdoe from the data base
+     *
+     * @param view - the view it was called from
+     */
     public void deleteOrder(View view) {
         View parent = (View) view.getParent();
         TextView barcodeText = parent.findViewById(R.id.barcode_title);
@@ -63,4 +79,28 @@ public class MainActivity extends AppCompatActivity {
         orderScanner.updateUI();
 
     }
+
+    /**
+     * Directly called from the XML function
+     * Allows for the changing of quantity of an order
+     *
+     * @param view -  the view it was called from
+     */
+    public void editOrder(View view) {
+        View parent = (View) view.getParent();
+        final EditText number = new EditText(getApplicationContext());
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        number.setLayoutParams(layoutParams);
+
+        TextView title = parent.findViewById(R.id.barcode_title);
+        String code = title.getText().toString();
+
+        orderScanner.updateAmount(number, code);
+
+
+    }
+
+
 }

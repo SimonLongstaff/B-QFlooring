@@ -14,6 +14,9 @@ import java.util.List;
 
 import BQ.Flooring.R;
 
+/**
+ * Adapter for To do list view
+ */
 public class ToDoAdapter extends ArrayAdapter<String> {
 
     private final Activity context;

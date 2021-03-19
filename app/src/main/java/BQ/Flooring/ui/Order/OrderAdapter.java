@@ -15,6 +15,10 @@ import java.util.List;
 
 import BQ.Flooring.R;
 
+/**
+ * Adapter for orders in a list view
+ * Allows for display of both Barcode and # ordered in one list view
+ */
 public class OrderAdapter extends ArrayAdapter<String> {
 
     private final Activity context;

@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+/**
+ * Database of item orders
+ */
 public class OrderDatabase extends SQLiteOpenHelper {
 
 
@@ -40,6 +43,11 @@ public class OrderDatabase extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Inserts a new barcode & number into the database
+     * @param code - barcode
+     * @param num - number of item wanted
+     */
     public  void insertBarcode(String code, String num){
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -51,9 +59,27 @@ public class OrderDatabase extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Deletes an entry from the database
+     * @param code - barcode to be deleted
+     */
     public void deleteBarcode(String code){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(ORDER_TABLE, BARCODE + " = " + "'" + code + "'", null);
+        db.close();
+    }
+
+    /**
+     * Updates the amount of an barcode listed
+     * @param code - barcode
+     * @param num - the new number of items
+     */
+    public void updateAmount(String code, String num){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put(AMOUNT,num);
+        db.update(ORDER_TABLE, cv,BARCODE+" = "+ code, null);
         db.close();
     }
 }

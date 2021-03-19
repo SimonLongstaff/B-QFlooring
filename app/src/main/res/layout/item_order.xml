@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/barcode_title"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="Item"
@@ -24,28 +24,47 @@
         android:id="@+id/barcode_amount"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/task_title"
         android:layout_toRightOf="@+id/task_title"
         android:text="#"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/barcode_delete"
-        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toEndOf="@+id/barcode_title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/button"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+
+        android:onClick="editOrder"
+        app:icon="@drawable/ic_baseline_edit_24"
+        app:layout_constraintStart_toEndOf="@+id/barcode_amount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/barcode_delete"
-        android:onClick="deleteOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/delete"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:onClick="deleteOrder"
+        android:textAlignment="center"
+        app:icon="@drawable/ic_baseline_delete_24"
+        app:iconPadding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

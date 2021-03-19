@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+/**
+ * To do item database
+ */
 public class TodoDatabase extends SQLiteOpenHelper {
 
     private static final String TAG = "TODO-DatabaseHelper";
@@ -43,6 +46,11 @@ public class TodoDatabase extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Insert new task
+     * @param task - the task information
+     * @param aisle - the location information
+     */
     public void insertTask(String task, String aisle){
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -54,6 +62,10 @@ public class TodoDatabase extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Deletes a task from the database
+     * @param task - task to be removed
+     */
     public void deleteTask(String task){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TODO_TABLE,TASK + " = " + "'" + task + "'",null);
